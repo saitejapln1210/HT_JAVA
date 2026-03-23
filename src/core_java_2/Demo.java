@@ -47,10 +47,10 @@ public class Demo {
 
     private static void explainRule4(Main guide) {
         System.out.println("=== Rule 4: Parent Reference Controls Overloading ===");
-        Main.Animal pet = new Main.Dog();
-        Main.Dog dog = new Main.Dog();
+        Main.Animal pet = new Main.Dog(); // Parent refernce child object
+        Main.Dog dog = new Main.Dog(); // Child Reference child object
 
-        System.out.println("Runtime object identity -> " + pet.identity());
+        System.out.println("Runtime object identity -> " + pet.identity()); // method overiding
         System.out.println("Animal reference result -> " + guide.rule4Reference(pet));
         System.out.println("Dog reference result -> " + guide.rule4Reference(dog));
     }
