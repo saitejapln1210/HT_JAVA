@@ -1,35 +1,44 @@
 package core_java_1;
 
-
-// why protected is not used at top level class
 public class Main {
+    public static final String COURSE_NAME = "Core Java Package 1";
+    private static int batchStrength = 25;
 
-    public String gf; // insatnce variable
+    private final int learnerId;
+    private String learnerName;
+    protected int practiceHours;
+    public boolean conceptRevisionComplete;
 
-//    public static final String HARSHU = "I LOVE YOU"; // static constant variable
-    public static int a = 1; // as it is static this is at class level, but can this changed by any constructor via local variable ?
-
-    public Main(){
+    public Main(int learnerId, String learnerName, int practiceHours) {
+        this.learnerId = learnerId;
+        this.learnerName = learnerName;
+        this.practiceHours = practiceHours;
+        this.conceptRevisionComplete = false;
     }
 
-    public Main(int a){
-        this.a = a;
+    public String describeLearner() {
+        return "Learner " + learnerId + " - " + learnerName
+                + " | practiceHours=" + practiceHours
+                + " | revisionComplete=" + conceptRevisionComplete;
     }
 
-    public Main(String gf){
-        this.gf = gf;
+    public void addPracticeHours(int extraHours) {
+        practiceHours += extraHours;
     }
 
-    public void insantanceMethod(int a){
-        this.a = a;
+    public void markRevisionComplete() {
+        conceptRevisionComplete = true;
     }
 
-    public static void staticMethod(int a){
-        a = 25;
+    public final String learnerSummary() {
+        return learnerName + " is learning " + COURSE_NAME;
     }
 
+    public static void updateBatchStrength(int updatedStrength) {
+        batchStrength = updatedStrength;
+    }
 
-    // instance method -- both static and instance variables
-    // static method -- only static variables
+    public static String batchSummary() {
+        return "Batch strength for " + COURSE_NAME + " is " + batchStrength;
+    }
 }
-
