@@ -1,0 +1,22 @@
+# Core Java Package 4 Interview Questions
+
+- What is a constructor in Java?
+- How is a constructor different from a method?
+- Can a constructor have a return type?
+- Why is constructor overloading useful?
+- Can a class have multiple constructors?
+- What is constructor chaining in Java?
+- What is the purpose of `this()`?
+- Why must `this()` be the first statement in a constructor?
+- What is the difference between `this()` and `this.variable`?
+- How do you use `this.method()` in Java?
+- What is a static block and when does it execute?
+- Can a static block access instance variables directly?
+- What is an instance initialization block?
+- When does an instance block execute relative to the constructor?
+- What is the execution order among static block, instance block, and constructor?
+- Does a static block run for every object creation?
+- Can constructor overloading and `this()` be used together?
+- Why are static blocks useful for class-level initialization?
+- What kind of logic should be placed in instance initialization blocks?
+- How would you explain constructor flow in an interview with one example?

@@ -1,0 +1,22 @@
+# Core Java Package 3 Interview Questions
+
+- What is the difference between stack memory and heap memory in Java?
+- Where are local variables stored in Java?
+- Where are instance variables stored in Java?
+- Where are static variables stored in Java?
+- Where are objects created using `new` stored?
+- What is stored in the method area?
+- Does every thread get its own stack memory?
+- Why are local reference variables stored in stack while objects are stored in heap?
+- What happens to a stack frame after a method call completes?
+- When does an object become eligible for garbage collection?
+- What is the difference between class-level memory and object-level memory?
+- Can two objects share the same instance variable copy?
+- Why can instance methods access static variables directly?
+- Why can static methods not directly access instance variables?
+- Can an instance method call a static method directly?
+- How can a static method access instance data?
+- What is the difference between a reference variable and an object in Java?
+- Are methods stored inside each object in Java?
+- Why are static fields shared across all objects?
+- If multiple objects are created from one class, what memory parts are shared and what parts are separate?

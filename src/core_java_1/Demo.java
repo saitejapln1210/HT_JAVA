@@ -66,7 +66,7 @@ public class Demo {
 
     private static void runKeywordExample() {
         System.out.println("=== static, non-static, final ===");
-        Main learner = new Main(101, "Harsha", 6);
+        Main learner = new Main(101, "Harshu", 6);
         System.out.println(learner.describeLearner());
 
         learner.addPracticeHours(2);

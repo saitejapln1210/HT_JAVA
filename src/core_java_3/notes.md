@@ -1,4 +1,4 @@
-# Core Java Package 3 Nodes
+# Core Java Package 3 Notes
 
 - Goal: understand where Java stores variables, methods, and objects during program execution.
 
@@ -88,6 +88,39 @@ class Student {
 - Stack frame may contain a reference pointing to that heap object.
 - When method execution ends, the local frame is removed from stack.
 - If no references point to an object, it becomes eligible for garbage collection.
+
+## Visibility Of Static And Instance Fields And Methods
+
+- Static fields belong to the class, so one shared copy exists for all objects.
+- Instance fields belong to each object, so every object has its own copy.
+- Static methods can directly access only static members.
+- Static methods cannot directly access instance fields or instance methods because they do not have an implicit object reference.
+- Instance methods can directly access:
+  - instance fields
+  - instance methods
+  - static fields
+  - static methods
+- If a static method wants to use instance data, it must receive an object reference.
+
+## Example From `src/core_java_3/Main.java`
+
+```java
+public static String staticMethodVisibility() {
+    return "Static method directly accesses static data";
+}
+
+public String instanceMethodVisibility() {
+    return learnerName + " can access instance and static members";
+}
+
+public static String staticMethodUsingObject(Main learner) {
+    return learner.learnerName;
+}
+```
+
+- `staticMethodVisibility()` directly uses class data.
+- `instanceMethodVisibility()` directly uses both object data and class data.
+- `staticMethodUsingObject(Main learner)` shows that a static method needs an object reference to read instance fields.
 
 ## Key Interview Points
 

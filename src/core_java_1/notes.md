@@ -63,7 +63,7 @@ public class Student {
   - `char` - single Unicode character
   - `boolean` - `true` or `false`
 - Reference type example:
-  - `String name = "Harsha";`
+- `String name = "Harshu";`
 
 ## Operator Precedence And Associativity
 

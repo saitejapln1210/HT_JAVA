@@ -27,3 +27,15 @@
 - rule 3  - if there is var args it is least priority if no other method gets matched
 - rule 4 - parent reference will be considered in method overloading 
 - Explain about path by value and path by reference with a example in java 
+
+# Core Java Package 3
+- Explain about memory of variables, classes, objects in java
+- Explain about visibility of fields, methods for both static and instance in java class with clear example, like mentioning whether static method can access instance variables or not, whether instance method can access static variables or not
+
+
+# core Java Package 4
+- Explain about constructors in java with example
+- Explain constructor overloading in java with examples
+- Explain about this keyword usage in java covering all variations like this(), this. method and variable
+- Explain about static block and initialization block with example
+- Explain the code flow which will be executed first among static block, initialization block, and in constructor
