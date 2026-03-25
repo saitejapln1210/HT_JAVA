@@ -1,0 +1,22 @@
+# Core Java Package 5 Interview Questions
+
+- What is data hiding in Java?
+- Why is data hiding important in object-oriented programming?
+- How does Java support data hiding?
+- Which access modifier is most commonly used for data hiding?
+- Is data hiding the same as encapsulation?
+- What is encapsulation in Java?
+- Why is encapsulation important from an interview point of view?
+- Are getters and setters enough to claim proper encapsulation?
+- How does encapsulation improve maintainability?
+- Can encapsulation exist without validation logic?
+- What is abstraction in Java?
+- How is abstraction achieved in Java?
+- What is the difference between an abstract class and an interface?
+- Why is abstraction useful in real-world design?
+- What is the difference between abstraction and encapsulation?
+- Can a class use both encapsulation and abstraction together?
+- Give a real-time example of abstraction.
+- Give a banking-related example of data hiding.
+- Why should object state not be exposed directly?
+- How would you explain encapsulation vs abstraction in one interview answer?
