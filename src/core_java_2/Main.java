@@ -45,6 +45,21 @@ public class Main {
         return "Compiler selected Dog reference overload";
     }
 
+    public String changePrimitiveValue(int value) {
+        value = value + 10;
+        return "Inside method primitive value = " + value;
+    }
+
+    public String changeObjectState(ScoreCard scoreCard) {
+        scoreCard.marks = scoreCard.marks + 10;
+        return "Inside method object marks = " + scoreCard.marks;
+    }
+
+    public String reassignObjectReference(ScoreCard scoreCard) {
+        scoreCard = new ScoreCard(99);
+        return "Inside method reassigned object marks = " + scoreCard.marks;
+    }
+
     static class Animal {
         public String identity() {
             return "Animal";
@@ -55,6 +70,14 @@ public class Main {
         @Override
         public String identity() {
             return "Dog";
+        }
+    }
+
+    static class ScoreCard {
+        int marks;
+
+        ScoreCard(int marks) {
+            this.marks = marks;
         }
     }
 }

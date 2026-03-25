@@ -95,6 +95,34 @@ choose(pet); // choose(Animal)
 
 - Even though object is `Dog`, compiler sees reference `Animal`.
 
+## Pass By Value And Reference Behavior In Java
+
+- Java is always pass by value.
+- For primitive types, the method gets a copy of the primitive value.
+- For objects, the method gets a copy of the reference, not the original variable itself.
+- Because both copied references can point to the same object, object state can be changed inside the method.
+- But if the parameter reference is reassigned inside the method, the caller's reference does not change.
+- Example:
+
+```java
+void changeNumber(int value) {
+    value = 100;
+}
+
+void changeMarks(ScoreCard card) {
+    card.marks = 100;
+}
+
+void reassignCard(ScoreCard card) {
+    card = new ScoreCard(200);
+}
+```
+
+- `changeNumber()` does not update the caller variable.
+- `changeMarks()` updates the same object, so caller sees changed state.
+- `reassignCard()` only changes the local copied reference inside the method.
+- So Java does not support true pass by reference for method arguments.
+
 ## Resolution Flow
 
 - Compiler reads the method name and argument list.

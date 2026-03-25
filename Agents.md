@@ -26,3 +26,4 @@
 - rule 2b - method overloading if it finds multiple matches for methods, if there is parent child relation, child is priority. For this you consider null as value to 2 same methods
 - rule 3  - if there is var args it is least priority if no other method gets matched
 - rule 4 - parent reference will be considered in method overloading 
+- Explain about path by value and path by reference with a example in java 

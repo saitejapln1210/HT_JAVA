@@ -15,3 +15,6 @@
 - Can overloaded methods differ only by return type?
 - Can automatic boxing and widening both affect overloading?
 - What is the difference between compile-time reference checking and runtime polymorphism?
+- Is Java pass by value or pass by reference?
+- Why can a method change object state if Java is pass by value?
+- What is the difference between changing an object and reassigning an object reference inside a method?

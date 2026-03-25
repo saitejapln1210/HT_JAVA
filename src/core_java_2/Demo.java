@@ -9,6 +9,7 @@ public class Demo {
         explainRule2(guide);
         explainRule3(guide);
         explainRule4(guide);
+        explainParameterPassing(guide);
     }
 
     private static void explainMethodSignature(Main guide) {
@@ -47,11 +48,30 @@ public class Demo {
 
     private static void explainRule4(Main guide) {
         System.out.println("=== Rule 4: Parent Reference Controls Overloading ===");
-        Main.Animal pet = new Main.Dog(); // Parent refernce child object
-        Main.Dog dog = new Main.Dog(); // Child Reference child object
+        Main.Animal pet = new Main.Dog();
+        Main.Dog dog = new Main.Dog();
 
-        System.out.println("Runtime object identity -> " + pet.identity()); // method overiding
+        System.out.println("Runtime object identity -> " + pet.identity());
         System.out.println("Animal reference result -> " + guide.rule4Reference(pet));
         System.out.println("Dog reference result -> " + guide.rule4Reference(dog));
+        System.out.println();
+    }
+
+    private static void explainParameterPassing(Main guide) {
+        System.out.println("=== Java Pass By Value And Reference Behavior ===");
+        int marks = 50;
+        Main.ScoreCard scoreCard = new Main.ScoreCard(50);
+
+        System.out.println("Before primitive method call -> " + marks);
+        System.out.println(guide.changePrimitiveValue(marks));
+        System.out.println("After primitive method call -> " + marks);
+
+        System.out.println("Before object state change -> " + scoreCard.marks);
+        System.out.println(guide.changeObjectState(scoreCard));
+        System.out.println("After object state change -> " + scoreCard.marks);
+
+        System.out.println("Before object reference reassignment -> " + scoreCard.marks);
+        System.out.println(guide.reassignObjectReference(scoreCard));
+        System.out.println("After object reference reassignment -> " + scoreCard.marks);
     }
 }
