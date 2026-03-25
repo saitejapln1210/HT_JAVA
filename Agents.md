@@ -36,6 +36,10 @@
 # core Java Package 4
 - Explain about constructors in java with example
 - Explain constructor overloading in java with examples
+- Explain about what access modifiers constructor can have
 - Explain about this keyword usage in java covering all variations like this(), this. method and variable
+- Is this not used for static ?
+- Is constructor will be overrided in child class ?
+- can abstract and interface have constructor ?
 - Explain about static block and initialization block with example
 - Explain the code flow which will be executed first among static block, initialization block, and in constructor

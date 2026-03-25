@@ -4,7 +4,9 @@ public class Demo {
     public static void main(String[] args) {
         explainConstructors();
         explainConstructorOverloading();
+        explainConstructorAccessModifiers();
         explainThisKeyword();
+        explainAdditionalConstructorRules();
         explainBlocksAndFlow();
     }
 
@@ -35,6 +37,22 @@ public class Demo {
         System.out.println("this.method() calls another method of the current object.");
         learner.updateLearner("Keerthi Updated", 6);
         System.out.println(learner.callCurrentObjectMethod());
+        System.out.println();
+    }
+
+    private static void explainConstructorAccessModifiers() {
+        System.out.println("=== Constructor Access Modifiers ===");
+        Main learner = new Main("Access Learner", 1);
+        System.out.println(learner.constructorAccessModifierSummary());
+        System.out.println();
+    }
+
+    private static void explainAdditionalConstructorRules() {
+        System.out.println("=== Extra Constructor And this Rules ===");
+        Main learner = new Main("Rule Learner", 2);
+        System.out.println(learner.staticThisRule());
+        System.out.println(learner.constructorOverrideRule());
+        System.out.println(learner.abstractAndInterfaceConstructorRule());
         System.out.println();
     }
 

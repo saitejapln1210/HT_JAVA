@@ -35,6 +35,23 @@ class Student {
   - partially initialized object creation
   - fully customized object creation
 
+## What Access Modifiers Can Constructors Have?
+
+- Constructors can have these access modifiers:
+  - `public`
+  - `protected`
+  - default/package-private
+  - `private`
+- Meaning:
+  - `public` constructor -> object can be created from anywhere the class is visible
+  - `protected` constructor -> object creation allowed in the same package and subclasses
+  - default constructor -> object creation allowed only in the same package
+  - `private` constructor -> object creation allowed only inside the same class
+- `private` constructors are often used in:
+  - singleton design ideas
+  - utility classes
+  - factory method patterns
+
 ## `this` Keyword In Java
 
 - `this` refers to the current object.
@@ -56,6 +73,48 @@ public void updateLearner(String learnerName, int practiceHours) {
 ```
 
 - `this()` must be the first statement inside a constructor.
+
+## Is `this` Used In Static Context?
+
+- No, `this` cannot be used in a static method, static block, or static variable initialization.
+- Reason:
+  - `this` points to the current object
+  - static members belong to the class, not to a specific object
+- So static code has no current object reference.
+
+## Can A Constructor Be Overridden In A Child Class?
+
+- No, constructors are not inherited, so they cannot be overridden.
+- When a child object is created:
+  - parent constructor runs first
+  - then child constructor runs
+- This is constructor chaining, not overriding.
+
+## Can Abstract Classes And Interfaces Have Constructors?
+
+- Abstract class:
+  - yes, abstract classes can have constructors
+  - constructor runs when a concrete child class object is created
+- Interface:
+  - no, interfaces cannot have constructors
+  - interface has no object initialization responsibility
+- Example idea:
+
+```java
+abstract class Parent {
+    Parent() {
+        System.out.println("parent constructor");
+    }
+}
+
+class Child extends Parent {
+    Child() {
+        System.out.println("child constructor");
+    }
+}
+```
+
+- Creating `new Child()` first runs `Parent()` and then `Child()`.
 
 ## Static Block
 
@@ -118,3 +177,6 @@ static {
 - Static block is class-level initialization.
 - Instance block is object-level pre-constructor initialization.
 - Static block executes before instance block and constructor.
+- Constructors are not overridden.
+- `this` is not allowed in static context.
+- Abstract classes can have constructors, interfaces cannot.

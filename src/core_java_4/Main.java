@@ -51,4 +51,95 @@ public class Main {
     public String flowSummary() {
         return "Execution flow: static block -> instance initialization block -> constructor.";
     }
+
+    public String constructorAccessModifierSummary() {
+        PublicConstructorSample publicSample = new PublicConstructorSample();
+        ProtectedConstructorSample protectedSample = new ProtectedConstructorSample();
+        DefaultConstructorSample defaultSample = new DefaultConstructorSample();
+        PrivateConstructorSample privateSample = PrivateConstructorSample.create();
+
+        return "Constructors can be public, protected, default, or private -> "
+                + publicSample.label + ", "
+                + protectedSample.label + ", "
+                + defaultSample.label + ", "
+                + privateSample.label;
+    }
+
+    public String staticThisRule() {
+        return "this cannot be used in a static context because this refers to the current object, and static code belongs to the class.";
+    }
+
+    public String constructorOverrideRule() {
+        ChildLearner childLearner = new ChildLearner();
+        return "Constructors are not overridden. Child constructor calls parent constructor first -> "
+                + childLearner.creationFlow;
+    }
+
+    public String abstractAndInterfaceConstructorRule() {
+        AbstractLearner abstractLearner = new ChildLearner();
+        return "Abstract classes can have constructors and they run during child object creation, but interfaces cannot have constructors -> "
+                + abstractLearner.baseMessage;
+    }
+
+    static class PublicConstructorSample {
+        String label;
+
+        public PublicConstructorSample() {
+            label = "public constructor";
+        }
+    }
+
+    static class ProtectedConstructorSample {
+        String label;
+
+        protected ProtectedConstructorSample() {
+            label = "protected constructor";
+        }
+    }
+
+    static class DefaultConstructorSample {
+        String label;
+
+        DefaultConstructorSample() {
+            label = "default constructor";
+        }
+    }
+
+    static class PrivateConstructorSample {
+        String label;
+
+        private PrivateConstructorSample() {
+            label = "private constructor";
+        }
+
+        static PrivateConstructorSample create() {
+            return new PrivateConstructorSample();
+        }
+    }
+
+    abstract static class AbstractLearner {
+        String baseMessage;
+
+
+        AbstractLearner(String baseMessage) {
+            this.baseMessage = baseMessage;
+        }
+    }
+
+    interface PracticeContract {
+        void practise();
+    }
+
+    static class ChildLearner extends AbstractLearner implements PracticeContract {
+        String creationFlow;
+
+        ChildLearner() {
+            super("abstract constructor executed");
+            creationFlow = "parent constructor -> child constructor";
+        }
+
+        @Override
+        public void practise() {
+        }
+    }
 }

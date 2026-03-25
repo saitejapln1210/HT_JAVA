@@ -11,6 +11,14 @@
 - What is the difference between `this()` and `this.variable`?
 - How do you use `this.method()` in Java?
 - What is a static block and when does it execute?
+- What access modifiers can constructors have?
+- Why would someone use a private constructor?
+- Can `this` be used inside a static method? Why?
+- Can constructors be overridden in a child class?
+- Why are constructors not inherited like normal methods?
+- Can an abstract class have a constructor?
+- Why can an interface not have a constructor?
+- When a child object is created, which constructor runs first?
 - Can a static block access instance variables directly?
 - What is an instance initialization block?
 - When does an instance block execute relative to the constructor?
