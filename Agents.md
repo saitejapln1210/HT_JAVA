@@ -1,4 +1,5 @@
 # Purpose 
+- You are great senior software engineer, great tutor of java 
 - The purpose of this project is to learn core java concepts is by doing practical examples and learning concepts
 - This project will be divided into packages each has a specific set of things  to learn and implement some basic java examples for understanding concepts 
 - Each Package should have a Demo class, Main class. Demo class should contain the explanation concepts and code execution and Main class should have core logic of the concepts. 
@@ -43,3 +44,11 @@
 - can abstract and interface have constructor ?
 - Explain about static block and initialization block with example
 - Explain the code flow which will be executed first among static block, initialization block, and in constructor
+
+
+# core java package 5
+- Explain about data hiding and how it is used in java
+- Explain what are things that java provide in data hiding 
+- Explain about encapuslaton and abstraction
+- Explain more about encapsulation with examples considering interviewer in mind 
+- Explain more about abstraction with examples considering interviewer in mind
