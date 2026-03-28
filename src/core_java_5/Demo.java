@@ -5,7 +5,7 @@ public class Demo {
         Main guide = new Main();
 
         explainDataHiding(guide);
-        explainJavaSupportForDataHiding();
+        explainJavaSupportForDataHiding(guide);
         explainEncapsulation(guide);
         explainAbstraction(guide);
         explainInterviewFocus(guide);
@@ -18,10 +18,10 @@ public class Demo {
         System.out.println();
     }
 
-    private static void explainJavaSupportForDataHiding() {
+    private static void explainJavaSupportForDataHiding(Main guide) {
         System.out.println("=== What Java Provides For Data Hiding ===");
-        System.out.println("Java mainly provides data hiding through private fields and controlled access methods.");
-        System.out.println("Access modifiers like private, default, protected, and public decide visibility.");
+        System.out.println(guide.explainJavaSupportForDataHiding());
+        System.out.println("Java also uses encapsulation patterns to keep object state valid.");
         System.out.println();
     }
 
@@ -29,6 +29,7 @@ public class Demo {
         System.out.println("=== Encapsulation ===");
         System.out.println("Encapsulation binds data and related methods into one unit, usually a class.");
         System.out.println(guide.explainEncapsulation());
+        System.out.println(guide.explainEncapsulationEdgeCase());
         System.out.println();
     }
 
@@ -36,12 +37,13 @@ public class Demo {
         System.out.println("=== Abstraction ===");
         System.out.println("Abstraction focuses on required behavior and hides internal implementation details.");
         System.out.println(guide.explainAbstraction());
+        System.out.println(guide.explainAbstractionVariations());
         System.out.println();
     }
 
     private static void explainInterviewFocus(Main guide) {
         System.out.println("=== Interview Focus ===");
-        System.out.println(guide.explainInterviewLevelEncapsulation());
-        System.out.println(guide.explainInterviewLevelAbstraction());
+        System.out.println("Encapsulation interview tip -> talk about validation, controlled updates, and object consistency.");
+        System.out.println("Abstraction interview tip -> talk about contracts, loose coupling, and switching implementations.");
     }
 }

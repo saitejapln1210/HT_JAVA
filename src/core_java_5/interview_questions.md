@@ -1,22 +1,22 @@
 # Core Java Package 5 Interview Questions
 
 - What is data hiding in Java?
-- Why is data hiding important in object-oriented programming?
-- How does Java support data hiding?
-- Which access modifier is most commonly used for data hiding?
-- Is data hiding the same as encapsulation?
+- Why is data hiding important in object-oriented design?
+- Which Java feature is used most commonly to achieve data hiding?
+- What are the different Java tools that support data hiding?
+- Is data hiding the same as encapsulation? Explain clearly.
 - What is encapsulation in Java?
-- Why is encapsulation important from an interview point of view?
-- Are getters and setters enough to claim proper encapsulation?
-- How does encapsulation improve maintainability?
-- Can encapsulation exist without validation logic?
+- Why are getters and setters alone not enough for strong encapsulation?
+- How does encapsulation help maintain valid object state?
+- Can a class with public fields be called encapsulated?
+- What is an example of good encapsulation in a real project?
 - What is abstraction in Java?
+- How is abstraction different from encapsulation?
 - How is abstraction achieved in Java?
 - What is the difference between an abstract class and an interface?
-- Why is abstraction useful in real-world design?
-- What is the difference between abstraction and encapsulation?
-- Can a class use both encapsulation and abstraction together?
-- Give a real-time example of abstraction.
-- Give a banking-related example of data hiding.
-- Why should object state not be exposed directly?
-- How would you explain encapsulation vs abstraction in one interview answer?
+- When would you choose an abstract class over an interface?
+- Why should caller code depend on abstractions instead of concrete classes?
+- Can data hiding exist without abstraction?
+- Can abstraction exist without private fields?
+- How do data hiding, encapsulation, and abstraction work together in one design?
+- Explain encapsulation and abstraction with one interviewer-friendly example each.
