@@ -1,0 +1,22 @@
+# Core Java Package 6 Interview Questions
+
+- What is an interface in Java?
+- How is an interface different from an abstract class?
+- Why are interfaces used in Java design?
+- What is a default method in an interface?
+- Why were default methods introduced?
+- What access modifiers are allowed for interfaces?
+- What access modifiers do interface methods and variables have by default?
+- Can an interface have static methods?
+- Can an interface have final methods?
+- Why are interface variables always constants?
+- Can an interface have a constructor? Why?
+- Can one class implement multiple interfaces?
+- What happens if a class does not implement all interface methods?
+- What is the difference between `extends` and `implements`?
+- When should you choose an interface over an abstract class?
+- What is a marker interface?
+- Give an example of a marker interface use case.
+- What is a functional interface?
+- Why must a functional interface have exactly one abstract method?
+- What are common edge cases or conflicts while working with interfaces?

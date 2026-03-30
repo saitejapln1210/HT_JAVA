@@ -55,3 +55,16 @@
 - Explain more about abstraction with examples considering interviewer in mind
 - Explain why abstraction can have constructions
 - Rules of abstraction in java 
+
+# Core java package 6
+- Explain interfaces and provide a example interface in java, you can create extra classes apart from Main and Demo for this package
+- Explain default methods in interface and why these are useful with a example 
+- what access modifiers we can use this in interface, and in methods inside interface. Explain in detail with examples
+- Can we have static methods, final methods in interface ?
+- Can we have constructor in interface ? 
+- Rules of interfaces in java
+- Can we implement multiple interfaces
+- Explain the difference between abstraction and interface, when to use what, how to take decision when to use interface and a abstraction
+- Explain marker interface with a example
+- Explain Functional interface with a example (do not go until java 8, we will cover that later)
+- Edge case scenarios in interfaces in java
