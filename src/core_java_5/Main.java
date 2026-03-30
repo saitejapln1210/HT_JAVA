@@ -46,4 +46,15 @@ public class Main {
                 + cardService.processPayment(300.0) + " | "
                 + notificationChannel.send("Payment success");
     }
+
+    public String explainWhyAbstractionCanHaveConstructors() {
+        LearningModule module = new AbstractionRulesGuide("Abstraction Basics");
+
+        return "Abstract classes can have constructors because child objects still need base-state initialization -> "
+                + module.moduleHeader() + " | " + module.deliverTopic();
+    }
+
+    public String explainRulesOfAbstraction() {
+        return "Rules: an abstract class cannot be instantiated, it can contain abstract and concrete methods, if a class has an abstract method it must be abstract, and a concrete child must implement inherited abstract methods unless the child is abstract.";
+    }
 }

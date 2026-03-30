@@ -48,8 +48,10 @@
 
 # core java package 5
 - Explain about data hiding and how it is used in java
-- For explaining this data hiding i.e both abstraction and encapsulation, you can create extra classes apart from Main and Demo
+- For explaining this data hiding i.e both abstraction and encapsulation, you can create extra classes apart from Main and Demo for this package
 - Explain what are things that java provide in data hiding 
 - Explain about encapuslaton and abstraction in detail all concepts and edge scenarios
 - Explain more about encapsulation with examples considering interviewer in mind 
 - Explain more about abstraction with examples considering interviewer in mind
+- Explain why abstraction can have constructions
+- Rules of abstraction in java 

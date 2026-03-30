@@ -8,6 +8,7 @@ public class Demo {
         explainJavaSupportForDataHiding(guide);
         explainEncapsulation(guide);
         explainAbstraction(guide);
+        explainAdvancedAbstractionRules(guide);
         explainInterviewFocus(guide);
     }
 
@@ -38,6 +39,13 @@ public class Demo {
         System.out.println("Abstraction focuses on required behavior and hides internal implementation details.");
         System.out.println(guide.explainAbstraction());
         System.out.println(guide.explainAbstractionVariations());
+        System.out.println();
+    }
+
+    private static void explainAdvancedAbstractionRules(Main guide) {
+        System.out.println("=== Why Abstraction Can Have Constructors And Rules ===");
+        System.out.println(guide.explainWhyAbstractionCanHaveConstructors());
+        System.out.println(guide.explainRulesOfAbstraction());
         System.out.println();
     }
 

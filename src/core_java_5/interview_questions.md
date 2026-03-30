@@ -15,6 +15,12 @@
 - How is abstraction achieved in Java?
 - What is the difference between an abstract class and an interface?
 - When would you choose an abstract class over an interface?
+- Can an abstract class have a constructor? Why?
+- Why can an interface not have a constructor?
+- What are the main rules of abstraction in Java?
+- Can an abstract class have concrete methods?
+- What happens if a child class does not implement an abstract method?
+- Can an abstract method be private, static, or final?
 - Why should caller code depend on abstractions instead of concrete classes?
 - Can data hiding exist without abstraction?
 - Can abstraction exist without private fields?

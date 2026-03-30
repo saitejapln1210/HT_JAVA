@@ -152,6 +152,33 @@ class Student {
 - `src/core_java_5/UpiPaymentService.java` and `src/core_java_5/CardPaymentService.java` provide different implementations.
 - `src/core_java_5/NotificationChannel.java` is an interface.
 - `src/core_java_5/EmailNotificationService.java` implements that contract.
+- `src/core_java_5/LearningModule.java` shows that an abstract class can also have a constructor.
+
+## Why Can Abstraction Have Constructors?
+
+- Abstract classes can have constructors.
+- Reason:
+  - abstract classes cannot create objects directly
+  - but when a child class object is created, parent abstract-class state may still need initialization
+- Constructor in an abstract class is useful for:
+  - common field initialization
+  - shared setup logic
+  - constructor chaining for child classes
+- Example idea from `src/core_java_5/LearningModule.java`:
+
+```java
+public abstract class LearningModule {
+    protected final String moduleName;
+
+    public LearningModule(String moduleName) {
+        this.moduleName = moduleName;
+    }
+}
+```
+
+- `LearningModule` is abstract, but its constructor still runs when `AbstractionRulesGuide` object is created.
+- This is why abstraction can have constructors when abstraction is implemented using abstract classes.
+- Interfaces are different because interfaces do not have constructors.
 
 ## Abstraction Edge Scenarios
 
@@ -163,6 +190,22 @@ class Student {
 - Interfaces are useful when:
   - only behavior contract is needed
   - unrelated classes can share the same capability
+
+## Rules Of Abstraction In Java
+
+- An abstract class cannot be instantiated directly.
+- An abstract class can contain:
+  - abstract methods
+  - concrete methods
+  - constructors
+  - fields
+  - static methods
+  - final methods
+- If a class contains at least one abstract method, the class itself must be declared `abstract`.
+- A concrete child class must implement all inherited abstract methods.
+- If a child class does not implement all inherited abstract methods, that child must also be declared `abstract`.
+- Abstract methods cannot be `private`, `final`, or `static` because they must be overridden by subclasses.
+- Interfaces provide full abstraction in contract style, while abstract classes provide partial abstraction plus shared implementation.
 
 ## Interview View Of Abstraction
 
@@ -201,4 +244,6 @@ class Student {
 - Encapsulation is not just getters and setters; it should protect valid state.
 - Abstraction reduces complexity by exposing contracts.
 - Abstract class and interface both support abstraction, but they are used in different design situations.
+- Abstract classes can have constructors because child objects may need common parent initialization.
+- Rules of abstraction are a common interview topic, especially abstract-method implementation requirements.
 - Real systems usually combine data hiding, encapsulation, and abstraction together.
