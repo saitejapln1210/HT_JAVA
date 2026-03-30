@@ -167,6 +167,25 @@ static String reportType() {
 - Private interface methods are used only for internal reuse and are available from Java 9.
 - Interfaces are best for capabilities/contracts, not shared mutable state.
 
+## Diamond Problem In Interfaces
+
+- Diamond problem in interfaces happens when one class implements two interfaces that provide the same default method.
+- Java does not guess automatically which default method to use.
+- The implementing class must override the method and resolve the conflict explicitly.
+- Example from `src/core_java_6/DiamondProblemResolver.java`:
+
+```java
+public class DiamondProblemResolver implements TheorySession, LabSession {
+    @Override
+    public String sessionPlan() {
+        return TheorySession.super.sessionPlan() + " + " + LabSession.super.sessionPlan();
+    }
+}
+```
+
+- This is how Java resolves the diamond problem for interface default methods.
+- The class chooses the final behavior by overriding the conflicting method.
+
 ## Key Interview Points
 
 - Interface means contract.
@@ -177,5 +196,6 @@ static String reportType() {
 - Private interface methods are available from Java 9.
 - Interfaces cannot have constructors.
 - One class can implement multiple interfaces.
+- Diamond problem with default methods is resolved by overriding the method in the implementing class.
 - Marker interface has no methods.
 - Functional interface has exactly one abstract method.

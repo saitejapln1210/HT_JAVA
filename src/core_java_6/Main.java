@@ -72,6 +72,11 @@ public class Main {
         return "Functional interface has exactly one abstract method -> totalScore=" + calculator.calculate(40, 45);
     }
 
+    public String explainDiamondProblemResolution() {
+        DiamondProblemResolver resolver = new DiamondProblemResolver();
+        return resolver.sessionPlan();
+    }
+
     public String explainInterfaceEdgeCases() {
         return "Edge cases: interface variables are constants, default-method conflicts must be resolved by the class, private interface methods are available from Java 9 for internal reuse, and if a class does not implement all abstract methods it must be declared abstract.";
     }

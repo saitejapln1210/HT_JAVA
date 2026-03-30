@@ -62,5 +62,6 @@ public class Demo {
     private static void explainEdgeCases(Main guide) {
         System.out.println("=== Interface Edge Cases ===");
         System.out.println(guide.explainInterfaceEdgeCases());
+        System.out.println(guide.explainDiamondProblemResolution());
     }
 }
