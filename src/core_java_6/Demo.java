@@ -26,6 +26,7 @@ public class Demo {
         System.out.println(guide.explainDefaultMethods());
         System.out.println(guide.explainWhyDefaultAndStaticMethodsExist());
         System.out.println(guide.explainOverrideRulesForDefaultAndStaticMethods());
+        System.out.println(guide.explainPrivateInterfaceMethods());
         System.out.println();
     }
 

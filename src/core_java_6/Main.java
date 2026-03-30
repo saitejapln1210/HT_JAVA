@@ -12,6 +12,11 @@ public class Main {
                 + report.progressStatus();
     }
 
+    public String explainPrivateInterfaceMethods() {
+        ProgressReport report = new JavaStudent("Harshu");
+        return report.privateMethodVersionInfo();
+    }
+
     public String explainWhyDefaultAndStaticMethodsExist() {
         return "Default methods are useful when interfaces need reusable instance-level behavior for implementing classes, while static methods are useful for interface-related utility logic that belongs to the interface itself, not to objects.";
     }
@@ -68,6 +73,6 @@ public class Main {
     }
 
     public String explainInterfaceEdgeCases() {
-        return "Edge cases: interface variables are constants, default-method conflicts must be resolved by the class, and if a class does not implement all abstract methods it must be declared abstract.";
+        return "Edge cases: interface variables are constants, default-method conflicts must be resolved by the class, private interface methods are available from Java 9 for internal reuse, and if a class does not implement all abstract methods it must be declared abstract.";
     }
 }

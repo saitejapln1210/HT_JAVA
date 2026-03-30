@@ -67,4 +67,5 @@
 - Explain the difference between abstraction and interface, when to use what, how to take decision when to use interface and a abstraction
 - Explain marker interface with a example
 - Explain Functional interface with a example (do not go until java 8, we will cover that later)
+- Explain from which Java version private methods are allowed in interfaces, with an example
 - Edge case scenarios in interfaces in java

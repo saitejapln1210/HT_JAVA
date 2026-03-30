@@ -35,6 +35,22 @@ default String progressStatus() {
   - less duplicate code in implementing classes
 - Default methods belong to implementing objects, so they can be overridden by implementing classes if custom behavior is needed.
 
+## Private Methods In Interface
+
+- Private methods in interfaces are supported from Java 9.
+- They are useful for internal helper logic shared by multiple `default` or `static` methods inside the same interface.
+- They are not visible to implementing classes.
+- Example from `src/core_java_6/ProgressReport.java`:
+
+```java
+private String buildMessage(String status) {
+    return "Default progress status: " + status;
+}
+```
+
+- Here the private method avoids duplication inside the interface itself.
+- Implementing classes cannot call or override private interface methods.
+
 ## Why Do We Need Both Default And Static Methods In Interfaces?
 
 - Both solve different problems.
@@ -72,7 +88,8 @@ default String progressStatus() {
 - Interface can also contain:
   - `default` methods
   - `static` methods
-  - `private` methods in newer Java versions for internal reuse
+- `private` methods in newer Java versions for internal reuse
+- private interface methods are available from Java 9 onward
 
 ## Can We Have Static Methods And Final Methods In Interface?
 
@@ -147,6 +164,7 @@ static String reportType() {
 - If two interfaces provide the same default method, the implementing class must resolve the conflict.
 - A class can extend one class but still implement multiple interfaces.
 - Interfaces do not support constructors.
+- Private interface methods are used only for internal reuse and are available from Java 9.
 - Interfaces are best for capabilities/contracts, not shared mutable state.
 
 ## Key Interview Points
@@ -156,6 +174,7 @@ static String reportType() {
 - Default methods can be overridden, static interface methods cannot.
 - Interface fields are always `public static final`.
 - Interfaces can have static methods.
+- Private interface methods are available from Java 9.
 - Interfaces cannot have constructors.
 - One class can implement multiple interfaces.
 - Marker interface has no methods.
