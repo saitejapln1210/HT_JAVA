@@ -4,6 +4,7 @@
 - How is an interface different from an abstract class?
 - Why are interfaces used in Java design?
 - What is a default method in an interface?
+- Is `default` in an interface an access modifier?
 - Why were default methods introduced?
 - What access modifiers are allowed for interfaces?
 - What access modifiers do interface methods and variables have by default?

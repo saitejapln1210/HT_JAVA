@@ -21,6 +21,9 @@ public interface LearningContract {
 
 - Default methods were introduced so interfaces can add behavior without breaking old implementing classes.
 - They are written using the `default` keyword.
+- Here `default` is not a default/package-private access modifier.
+- In interfaces, `default` means a method has implementation inside the interface.
+- A default method in an interface is still `public`.
 - Example from `src/core_java_6/ProgressReport.java`:
 
 ```java
