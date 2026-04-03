@@ -1,0 +1,32 @@
+# Core Java Package 7 Interview Questions
+
+- What is inheritance in Java?
+- Why is inheritance called an `is-a` relationship?
+- What is the difference between parent class and child class?
+- What is the use of the `extends` keyword?
+- What are the advantages of inheritance?
+- What are the disadvantages of inheritance?
+- What is the difference between inheritance and composition?
+- What are the types of inheritance in Java?
+- Why does Java not support multiple inheritance with classes?
+- What is the use of the `super` keyword?
+- Where can `super` be used in Java?
+- Why must `super()` be the first statement in a constructor?
+- Are constructors inherited in Java?
+- Are private members inherited?
+- What is method overloading in inheritance?
+- How does compiler resolve overloaded methods when a parent reference points to a child object?
+- What is method overriding in inheritance?
+- Why is overriding considered runtime polymorphism?
+- What are the rules of method overriding?
+- What is a covariant return type?
+- Can a final method be overridden?
+- Can an overriding method reduce access visibility?
+- Can static methods be overridden?
+- Why are static methods said to be hidden and not overridden?
+- Can var-arg methods be overridden?
+- Can variables be overridden in Java?
+- What is field hiding?
+- Is cyclic inheritance possible in Java?
+- How does inheritance create tight coupling?
+- When should you prefer composition over inheritance?
