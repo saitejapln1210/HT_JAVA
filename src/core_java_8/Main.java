@@ -1,6 +1,11 @@
 package core_java_8;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class Main {
     public String explainThrowableHierarchy() {
@@ -65,6 +70,35 @@ public class Main {
             return "Multiple resources are closed in reverse order -> " + file.read() + " | " + network.read();
         } catch (Exception exception) {
             return exception.getMessage();
+        }
+    }
+
+    public String explainFileStreamExample() {
+        Path tempFile = null;
+
+        try {
+            tempFile = Files.createTempFile("core-java-8-", ".txt");
+
+            try (FileOutputStream outputStream = new FileOutputStream(tempFile.toFile())) {
+                outputStream.write("Harshu learns file streams".getBytes(StandardCharsets.UTF_8));
+            }
+
+            byte[] data;
+            try (FileInputStream inputStream = new FileInputStream(tempFile.toFile())) {
+                data = inputStream.readAllBytes();
+            }
+
+            return "File stream example using FileOutputStream and FileInputStream -> "
+                    + new String(data, StandardCharsets.UTF_8);
+        } catch (IOException exception) {
+            return "File stream example failed -> " + exception.getMessage();
+        } finally {
+            if (tempFile != null) {
+                try {
+                    Files.deleteIfExists(tempFile);
+                } catch (IOException ignored) {
+                }
+            }
         }
     }
 
