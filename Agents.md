@@ -70,3 +70,31 @@
 - Explain from which Java version private methods are allowed in interfaces, with an example
 - Explain the diamond problem in interfaces and how it is resolved with an example
 - Edge case scenarios in interfaces in java
+
+# core java package 7
+- For this package you can create extra classes and if required create sub package inside this package for cleaner understanding
+- Explain about inheritance in java with a example
+- Explain all possible usage of super i.e. at method, field, constructor in inheritance
+- Explain about types of inheritance in java with examples
+- Explain rules in inheritance
+- Explain about overloading in inheritance with examples
+- Explain about overriding in inheritance
+- Rule of method overriding - method signature , covariant return types, parent method as final , child method final, scope of modifiers in overriding, scope of modifier in overloading, static method related i.e. method hiding not overriding ? also explain why ?, overriding for var-arg methods, is overriding applicable for variables ? if no why ? 
+- Is cyclic inheritance possible in Java
+- Edge and interview specific scenarios in inheritance and super keyword
+- How is inheritance linked with tight coupling ? when to use inheritance ?
+
+
+# core java 8
+- Explain about exceptional handling in java, for this package you can create another classes apart from demo and main
+- Explain about throwable, exception and error. Difference between error and exception
+- Explain some examples that comes under error and explain some examples that comes exception
+- Explain in detail about checked  and unchecked exceptions
+- Provide some examples what comes under checked and unchecked in exceptional handling hierarchy
+- Explain about try, catch and finally and its scenarios like can we have try and finally without catch, can we have try , catch without finally etc 
+- Explain about throw and throws in detail and provide an example for it. 
+- Explain in detail and scenarios around partially checked exceptions and fully checked exceptions. Cover these with proper examples and explanation
+- Rules while writing try catch finally from interview perspective
+- Explain and provide examples regarding try with resources and with multiple resources and Auto closable mechanism in it and what is it, explain in detail
+- Explain and provide examples multiple catch blocks and multi catch blocks and scenarios around it like relationships between exceptions in multi catch block
+- Explain the difference between final, finally and finalize

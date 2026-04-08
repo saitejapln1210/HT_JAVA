@@ -1,0 +1,22 @@
+# Core Java Package 8 Interview Questions
+
+- What is exception handling in Java?
+- What is the difference between Throwable, Exception, and Error?
+- How is Error different from Exception?
+- Give examples of errors in Java.
+- Give examples of checked and unchecked exceptions.
+- What is the difference between checked and unchecked exceptions?
+- Why does the compiler force handling of checked exceptions?
+- What is the difference between `throw` and `throws`?
+- Can we have `try` with `finally` but without `catch`?
+- Can we have `try` with `catch` but without `finally`?
+- Can we write `catch` without `try`?
+- What is a partially checked exception?
+- What is a fully checked exception?
+- What are important rules while writing catch blocks?
+- What is try-with-resources?
+- Why must a resource implement `AutoCloseable` in try-with-resources?
+- How are multiple resources closed in try-with-resources?
+- What is the difference between multiple catch and multi-catch?
+- Why are parent-child exception types not allowed together in multi-catch?
+- What is the difference between `final`, `finally`, and `finalize`?

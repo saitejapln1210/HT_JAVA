@@ -1,0 +1,68 @@
+package core_java_8;
+
+public class Demo {
+    public static void main(String[] args) {
+        Main guide = new Main();
+
+        explainHierarchy(guide);
+        explainCheckedAndUnchecked(guide);
+        explainTryCatchFinally(guide);
+        explainThrowAndThrows(guide);
+        explainCheckedCategories(guide);
+        explainTryWithResources(guide);
+        explainCatchVariations(guide);
+        explainFinalFinallyFinalize(guide);
+    }
+
+    private static void explainHierarchy(Main guide) {
+        System.out.println("=== Exception Handling Basics ===");
+        System.out.println(guide.explainThrowableHierarchy());
+        System.out.println(guide.explainErrorVsException());
+        System.out.println();
+    }
+
+    private static void explainCheckedAndUnchecked(Main guide) {
+        System.out.println("=== Checked And Unchecked Exceptions ===");
+        System.out.println(guide.explainCheckedUnchecked());
+        System.out.println(guide.explainHierarchyExamples());
+        System.out.println();
+    }
+
+    private static void explainTryCatchFinally(Main guide) {
+        System.out.println("=== try, catch, finally ===");
+        System.out.println("try can exist with catch, with finally, or with both. catch without try is invalid.");
+        System.out.println(guide.explainTryCatchFinally());
+        System.out.println();
+    }
+
+    private static void explainThrowAndThrows(Main guide) {
+        System.out.println("=== throw And throws ===");
+        System.out.println("throw is used to create an exception explicitly. throws is used in method signature to delegate checked-exception handling.");
+        System.out.println(guide.explainThrowAndThrows());
+        System.out.println();
+    }
+
+    private static void explainCheckedCategories(Main guide) {
+        System.out.println("=== Partially Checked And Fully Checked ===");
+        System.out.println(guide.explainCheckedScenarios());
+        System.out.println();
+    }
+
+    private static void explainTryWithResources(Main guide) {
+        System.out.println("=== Try With Resources ===");
+        System.out.println(guide.explainTryWithResources());
+        System.out.println(guide.explainMultipleResources());
+        System.out.println();
+    }
+
+    private static void explainCatchVariations(Main guide) {
+        System.out.println("=== Multiple Catch And Multi-Catch ===");
+        System.out.println(guide.explainMultipleCatchAndMultiCatch());
+        System.out.println();
+    }
+
+    private static void explainFinalFinallyFinalize(Main guide) {
+        System.out.println("=== final, finally, finalize ===");
+        System.out.println(guide.explainFinalFinallyFinalize());
+    }
+}

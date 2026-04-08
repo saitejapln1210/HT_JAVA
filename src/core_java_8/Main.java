@@ -1,0 +1,113 @@
+package core_java_8;
+
+import java.io.IOException;
+
+public class Main {
+    public String explainThrowableHierarchy() {
+        return "Throwable is the root type. Error represents serious system-level problems, and Exception represents conditions applications can handle.";
+    }
+
+    public String explainErrorVsException() {
+        return "Errors like StackOverflowError or OutOfMemoryError are usually not handled in normal application flow, while exceptions like IOException or ArithmeticException can be handled by application code.";
+    }
+
+    public String explainCheckedUnchecked() {
+        return "Checked exceptions are verified at compile time, while unchecked exceptions are subclasses of RuntimeException and are not forced by the compiler.";
+    }
+
+    public String explainHierarchyExamples() {
+        return "Checked examples: IOException, ClassNotFoundException. Unchecked examples: ArithmeticException, NullPointerException, IllegalArgumentException.";
+    }
+
+    public String explainTryCatchFinally() {
+        StringBuilder flow = new StringBuilder();
+
+        try {
+            flow.append("try executed");
+            int value = 10 / 0;
+            flow.append(value);
+        } catch (ArithmeticException exception) {
+            flow.append(" -> catch handled ArithmeticException");
+        } finally {
+            flow.append(" -> finally always executed");
+        }
+
+        return flow.toString();
+    }
+
+    public String explainThrowAndThrows() {
+        try {
+            validateMarks(-10);
+            readCourseFile("missing-file");
+            return "No exception triggered";
+        } catch (InvalidMarksException exception) {
+            return "throw creates an exception explicitly -> " + exception.getMessage();
+        } catch (InvalidCourseFileException exception) {
+            return "throws passes checked exception responsibility -> " + exception.getMessage();
+        }
+    }
+
+    public String explainCheckedScenarios() {
+        return "Partially checked type example: Exception, because RuntimeException is unchecked under it. Fully checked example: IOException, because its normal child types remain checked.";
+    }
+
+    public String explainTryWithResources() {
+        try (CourseResource file = new CourseResource("notes-resource")) {
+            return "try-with-resources uses AutoCloseable and closes resources automatically -> " + file.read();
+        } catch (Exception exception) {
+            return exception.getMessage();
+        }
+    }
+
+    public String explainMultipleResources() {
+        try (CourseResource file = new CourseResource("notes-resource");
+             CourseResource network = new CourseResource("network-resource")) {
+            return "Multiple resources are closed in reverse order -> " + file.read() + " | " + network.read();
+        } catch (Exception exception) {
+            return exception.getMessage();
+        }
+    }
+
+    public String explainMultipleCatchAndMultiCatch() {
+        StringBuilder result = new StringBuilder();
+
+        try {
+            triggerArithmetic();
+        } catch (ArithmeticException exception) {
+            result.append("Multiple catch: ArithmeticException handled specifically");
+        }
+
+        try {
+            triggerIllegalArgument();
+        } catch (ArithmeticException | IllegalArgumentException exception) {
+            result.append(" | Multi-catch handled related unchecked exception types together");
+        }
+
+        return result.toString();
+    }
+
+    public String explainFinalFinallyFinalize() {
+        return "final is a keyword for restricting reassignment/override/inheritance, finally is a block used with exception handling, and finalize was an old cleanup method that should not be relied on in modern Java.";
+    }
+
+    public void validateMarks(int marks) {
+        if (marks < 0) {
+            throw new InvalidMarksException("Marks cannot be negative");
+        }
+    }
+
+    public void readCourseFile(String fileName) throws InvalidCourseFileException {
+        if ("missing-file".equals(fileName)) {
+            throw new InvalidCourseFileException("Course file is missing");
+        }
+    }
+
+    private void triggerArithmetic() {
+        int value = 10 / 0;
+        System.out.println(value);
+    }
+
+    private void triggerIllegalArgument() {
+        throw new IllegalArgumentException("Invalid learner input");
+    }
+}
