@@ -15,6 +15,7 @@
 - What is a fully checked exception?
 - What are important rules while writing catch blocks?
 - What is try-with-resources?
+- What is the difference between FileInputStream and FileOutputStream?
 - Why must a resource implement `AutoCloseable` in try-with-resources?
 - How are multiple resources closed in try-with-resources?
 - What is the difference between multiple catch and multi-catch?

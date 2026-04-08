@@ -10,6 +10,7 @@ public class Demo {
         explainThrowAndThrows(guide);
         explainCheckedCategories(guide);
         explainTryWithResources(guide);
+        explainFileStreams(guide);
         explainCatchVariations(guide);
         explainFinalFinallyFinalize(guide);
     }
@@ -52,6 +53,13 @@ public class Demo {
         System.out.println("=== Try With Resources ===");
         System.out.println(guide.explainTryWithResources());
         System.out.println(guide.explainMultipleResources());
+        System.out.println();
+    }
+
+    private static void explainFileStreams(Main guide) {
+        System.out.println("=== File Stream Example ===");
+        System.out.println("File streams like FileInputStream and FileOutputStream are commonly used with try-with-resources.");
+        System.out.println(guide.explainFileStreamExample());
         System.out.println();
     }
 

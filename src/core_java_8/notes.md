@@ -127,6 +127,29 @@ public class CourseResource implements AutoCloseable {
   - safer resource management
 - Multiple resources are closed in reverse order of creation.
 
+## File Stream Example
+
+- File streams are used to read from or write to files.
+- Common classes:
+  - `FileInputStream`
+  - `FileOutputStream`
+- They are commonly used with `try-with-resources` so streams close automatically.
+- Example idea from `src/core_java_8/Main.java`:
+
+```java
+try (FileOutputStream outputStream = new FileOutputStream(file)) {
+    outputStream.write("Harshu learns file streams".getBytes(StandardCharsets.UTF_8));
+}
+
+try (FileInputStream inputStream = new FileInputStream(file)) {
+    byte[] data = inputStream.readAllBytes();
+}
+```
+
+- `FileOutputStream` writes bytes into a file.
+- `FileInputStream` reads bytes from a file.
+- Because streams work with system resources, automatic closing is important.
+
 ## Multiple Catch And Multi-Catch
 
 - Multiple catch means separate catch blocks for different exceptions.
