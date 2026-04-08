@@ -247,7 +247,7 @@ public static String category() {
   - overriding needs runtime dispatch through object
   - static methods are resolved using class/reference information at compile time
 
-### 8. Var-arg Methods Can Be Overridden
+### 8. Var-arg Methods can be Overridden should have method signature i.e. both parent and child should have var arsg
 
 - Var-arg is internally treated like an array parameter.
 - If signature matches, overriding is valid.
@@ -259,6 +259,7 @@ public String revisionPlan(String... topics) {
     return "Child overrides var-arg method";
 }
 ```
+- both parent and child should have var-args, if not it is like overloading not overriding
 
 ### 9. Variables Are Not Overridden
 
