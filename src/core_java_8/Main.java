@@ -52,6 +52,50 @@ public class Main {
         }
     }
 
+    public String explainThrowsWithConstructor() {
+        try {
+            CourseFileReader invalidReader = new CourseFileReader("");
+            return invalidReader.readerSummary();
+        } catch (InvalidCourseFileException exception) {
+            return "throws can be used with constructors because constructors execute object-initialization logic -> "
+                    + exception.getMessage();
+        }
+    }
+
+    public String explainWhyNoThrowsAtClassLevel() {
+        return "throws is not allowed at class level because a class is only a blueprint. Exception declaration belongs to executable members like methods and constructors, not to the class declaration itself.";
+    }
+
+    public String explainCustomExceptions() {
+        StringBuilder result = new StringBuilder();
+
+        try {
+            enrollLearner("Harshu", 15, false);
+            result.append("enrollment succeeded");
+        } catch (InvalidLearnerAgeException exception) {
+            result.append("Custom unchecked exception -> ").append(exception.getMessage());
+        } catch (CourseEnrollmentException exception) {
+            result.append("Custom checked exception -> ").append(exception.getMessage());
+        }
+
+        try {
+            enrollLearner("Harshu", 21, false);
+        } catch (InvalidLearnerAgeException exception) {
+            result.append(" | age validation failed unexpectedly");
+        } catch (CourseEnrollmentException exception) {
+            result.append(" | Custom checked exception -> ").append(exception.getMessage());
+        }
+
+        try {
+            enrollLearner("Harshu", 21, true);
+            result.append(" | enrollment succeeds when all business rules pass");
+        } catch (CourseEnrollmentException | InvalidLearnerAgeException exception) {
+            result.append(" | unexpected enrollment failure");
+        }
+
+        return result.toString();
+    }
+
     public String explainCheckedScenarios() {
         return "Partially checked type example: Exception, because RuntimeException is unchecked under it. Fully checked example: IOException, because its normal child types remain checked.";
     }
@@ -133,6 +177,17 @@ public class Main {
     public void readCourseFile(String fileName) throws InvalidCourseFileException {
         if ("missing-file".equals(fileName)) {
             throw new InvalidCourseFileException("Course file is missing");
+        }
+    }
+
+    public void enrollLearner(String learnerName, int age, boolean documentsSubmitted)
+            throws CourseEnrollmentException {
+        if (age < 18) {
+            throw new InvalidLearnerAgeException("Learner " + learnerName + " must be at least 18 years old");
+        }
+
+        if (!documentsSubmitted) {
+            throw new CourseEnrollmentException("Learner " + learnerName + " cannot enroll without required documents");
         }
     }
 

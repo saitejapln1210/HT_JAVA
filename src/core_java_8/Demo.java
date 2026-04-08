@@ -8,6 +8,8 @@ public class Demo {
         explainCheckedAndUnchecked(guide);
         explainTryCatchFinally(guide);
         explainThrowAndThrows(guide);
+        explainCustomExceptions(guide);
+        explainConstructorThrows(guide);
         explainCheckedCategories(guide);
         explainTryWithResources(guide);
         explainFileStreams(guide);
@@ -40,6 +42,20 @@ public class Demo {
         System.out.println("=== throw And throws ===");
         System.out.println("throw is used to create an exception explicitly. throws is used in method signature to delegate checked-exception handling.");
         System.out.println(guide.explainThrowAndThrows());
+        System.out.println();
+    }
+
+    private static void explainCustomExceptions(Main guide) {
+        System.out.println("=== Custom Exceptions ===");
+        System.out.println("Custom exceptions are user-defined exceptions created to represent business-specific problems more clearly.");
+        System.out.println(guide.explainCustomExceptions());
+        System.out.println();
+    }
+
+    private static void explainConstructorThrows(Main guide) {
+        System.out.println("=== throws With Constructor And Class Level ===");
+        System.out.println(guide.explainThrowsWithConstructor());
+        System.out.println(guide.explainWhyNoThrowsAtClassLevel());
         System.out.println();
     }
 

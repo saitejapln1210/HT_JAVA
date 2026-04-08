@@ -8,6 +8,11 @@
 - What is the difference between checked and unchecked exceptions?
 - Why does the compiler force handling of checked exceptions?
 - What is the difference between `throw` and `throws`?
+- Can `throws` be used with a constructor?
+- Why can `throws` not be used at class level?
+- What is a custom exception in Java?
+- When should you create a custom checked exception?
+- When should you create a custom unchecked exception?
 - Can we have `try` with `finally` but without `catch`?
 - Can we have `try` with `catch` but without `finally`?
 - Can we write `catch` without `try`?

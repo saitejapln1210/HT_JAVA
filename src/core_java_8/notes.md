@@ -87,6 +87,74 @@ public void readCourseFile(String fileName) throws InvalidCourseFileException {
 }
 ```
 
+## Can `throws` Be Used With Constructor And Class?
+
+- `throws` can be used with constructors.
+- `throws` can be used with methods.
+- `throws` cannot be used at class level.
+- Reason:
+  - constructors and methods contain executable logic
+  - class declaration is only a blueprint, not an executable block
+- Example from `src/core_java_8/CourseFileReader.java`:
+
+```java
+public class CourseFileReader {
+    public CourseFileReader(String fileName) throws InvalidCourseFileException {
+        if (fileName == null || fileName.isBlank()) {
+            throw new InvalidCourseFileException("Constructor cannot create CourseFileReader without a valid file name");
+        }
+    }
+}
+```
+
+- This works because constructor may fail while creating the object.
+- Invalid class-level idea:
+
+```java
+class CourseFileReader throws InvalidCourseFileException {
+}
+```
+
+- This is invalid because class declaration itself does not execute like a method or constructor.
+
+## Custom Exceptions
+
+- Custom exceptions are exceptions created by the developer for application-specific problems.
+- They make business-rule failures easier to understand than using generic exceptions everywhere.
+- Two common styles:
+  - custom checked exception extends `Exception`
+  - custom unchecked exception extends `RuntimeException`
+- In this package:
+  - `src/core_java_8/CourseEnrollmentException.java` is a custom checked exception
+  - `src/core_java_8/InvalidLearnerAgeException.java` is a custom unchecked exception
+
+## Better Custom Exception Example
+
+- Consider course enrollment logic.
+- If learner age is invalid, that is a validation rule violation.
+- If documents are missing, enrollment should fail with a domain-specific checked exception.
+- Example from `src/core_java_8/Main.java`:
+
+```java
+public void enrollLearner(String learnerName, int age, boolean documentsSubmitted)
+        throws CourseEnrollmentException {
+    if (age < 18) {
+        throw new InvalidLearnerAgeException("Learner must be at least 18 years old");
+    }
+
+    if (!documentsSubmitted) {
+        throw new CourseEnrollmentException("Learner cannot enroll without required documents");
+    }
+}
+```
+
+- Why this is a better example:
+  - exception names match the business problem
+  - checked vs unchecked usage becomes clear
+  - caller code can react differently based on exception type
+- Interview point:
+  - create custom exceptions when built-in exceptions do not clearly express the domain problem
+
 ## Partially Checked And Fully Checked Exceptions
 
 - Partially checked type example:
