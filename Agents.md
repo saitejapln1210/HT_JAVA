@@ -98,3 +98,12 @@
 - Explain and provide examples regarding try with resources and with multiple resources and Auto closable mechanism in it and what is it, explain in detail
 - Explain and provide examples multiple catch blocks and multi catch blocks and scenarios around it like relationships between exceptions in multi catch block
 - Explain the difference between final, finally and finalize
+
+# core java 9
+- Explain about Object class
+- Will each objects extends object class ? is it implicit ?
+- Explain the things that is present in the Object class ? explain them clearly 
+- Explain in detail about Hashcode and equals and its internal and about its contract 
+- Rules and scenarios related to Hashcode and equals with examples 
+- Hashcode and equals for different objects and datatypes with example
+- Interview specific scenarios related to Object class and Hashcode and equals
