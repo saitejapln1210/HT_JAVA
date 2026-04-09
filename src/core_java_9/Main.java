@@ -35,9 +35,9 @@ public class Main {
         Learner second = new Learner(101, "Harshu");
         Learner sameReference = first;
 
-        return "first == second -> " + (first == second)
-                + ", first.equals(second) -> " + first.equals(second)
-                + ", first == sameReference -> " + (first == sameReference);
+        return "first == second -> " + (first == second) // false diff address
+                + ", first.equals(second) -> " + first.equals(second) // true
+                + ", first == sameReference -> " + (first == sameReference);// true
     }
 
     public String demonstrateHashSetWithProperContract() {
@@ -51,8 +51,14 @@ public class Main {
 
     public String demonstrateHashSetWithBrokenContract() {
         Set<BrokenLearner> learners = new HashSet<>();
-        learners.add(new BrokenLearner(101, "Harshu"));
-        learners.add(new BrokenLearner(101, "Harshu"));
+        BrokenLearner b1 = new BrokenLearner(101,"Harshu");
+        BrokenLearner b2 = new BrokenLearner(101,"Harshu");
+        learners.add(b1);
+        learners.add(b2);
+        System.out.println(b1.hashCode());// 1587487668
+        System.out.println(b2.hashCode());// 1199823423
+        System.out.println(b1.equals(b2));// true
+
 
         return "HashSet size when equals() is overridden but hashCode() is not -> " + learners.size()
                 + " (contract broken, duplicates may appear).";
