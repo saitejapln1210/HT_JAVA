@@ -1,0 +1,28 @@
+# Core Java Package 10 Interview Questions
+
+- What is a wrapper class in Java, and why do we need it?
+- List all primitive types and their wrapper classes.
+- What is the difference between `parseInt()` and `valueOf()`?
+- What is boxing and unboxing in Java?
+- What is autoboxing and auto-unboxing?
+- What runtime issue can happen during unboxing?
+- Why can wrappers be stored in collections but primitives cannot?
+- Why should we prefer `equals()` over `==` for wrapper comparison?
+- Explain Integer caching and the range commonly cached by JVM.
+- Why does `Integer a = 127; Integer b = 127;` behave differently from `Integer a = 128; Integer b = 128;` when using `==`?
+- Is `String` mutable or immutable? Explain with example.
+- Why is `String` made immutable in Java?
+- How are strings created using literal and `new String()`?
+- What is String Constant Pool?
+- What is `intern()` in String?
+- Difference between `==` and `equals()` for strings.
+- Why is `StringBuilder` preferred over `String` in loops or repeated concatenation?
+- Difference between `StringBuilder` and `StringBuffer`.
+- Which one is thread-safe between `StringBuilder` and `StringBuffer`, and why?
+- Why is `StringBuilder` generally faster than `StringBuffer`?
+- How does immutability help thread safety and security?
+- Is string concatenation with `+` always inefficient? When does compiler optimize it?
+- What is compile-time string concatenation? Give an example where `==` returns true because of pooling.
+- Why does concatenation with a variable usually create a new String at runtime?
+- Can we store `null` in wrapper references? What should we watch for?
+- What are common edge cases around wrappers and strings asked in interviews?
