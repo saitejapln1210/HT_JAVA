@@ -1,0 +1,37 @@
+# Core Java Package 11 Interview Questions
+
+- What problems were introduced before generics, and how do generics solve them?
+- Difference between raw type and parameterized type with one practical failure example.
+- Why do generics improve compile-time safety but not remove all runtime type issues?
+- Explain type erasure with example. What remains at runtime?
+- Why are `List<String>` and `List<Integer>` considered the same raw type at runtime?
+- What is a bridge method, and why does compiler generate it?
+- Can we create `new T()` inside a generic class? Why not?
+- Why are primitives not allowed as generic type arguments?
+- Difference between `List<?>`, `List<Object>`, and raw `List`.
+- Explain invariance: why `List<Integer>` is not a subtype of `List<Number>`.
+- Explain array covariance and how it can fail at runtime.
+- What is heap pollution? Give a real scenario.
+- Why are generic arrays disallowed directly (`new T[]`)?
+- What is PECS rule? Give one producer and one consumer example.
+- Difference between `<? extends Number>` and `<? super Integer>` in read/write behavior.
+- When would you choose exact type `List<T>` instead of wildcard list?
+- Explain bounded generics and multiple bounds syntax/order rule.
+- Why should class bound come before interface bounds in multiple bounds?
+- Explain recursive bounds like `<T extends Comparable<T>>` and where it is useful.
+- Difference between generic class and generic method.
+- Can a static method in non-generic class still be generic? Example?
+- What is a generic constructor? How is it independent from class type parameters?
+- Can interfaces be generic? How do you implement them with fixed and variable types?
+- Why does Java disallow generic exception classes?
+- Why cannot we catch exception using type parameter in catch block?
+- How does type inference work with diamond operator `<>`?
+- What changed in type inference improvements in Java 8?
+- Explain use of `Comparable<T>` vs `Comparator<T>` in generic collections.
+- How do generics reduce casting in collections and maps?
+- Can wildcards be used in method return types? Should they always be avoided?
+- Is `List<? extends Number>` read-only? Can it accept `null`?
+- Difference between compile-time polymorphism with generics and runtime polymorphism with inheritance.
+- How does overriding interact with type erasure in subclasses?
+- When do unchecked warnings appear, and how should we handle them responsibly?
+- What are best practices to avoid generic-related bugs in large codebases?
