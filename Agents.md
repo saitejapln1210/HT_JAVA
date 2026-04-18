@@ -107,3 +107,32 @@
 - Rules and scenarios related to Hashcode and equals with examples 
 - Hashcode and equals for different objects and datatypes with example
 - Interview specific scenarios related to Object class and Hashcode and equals
+
+# core java 10
+- Explain in detail about wrapper class and provide some examples
+- boxing and unboxing in wrapper classes
+- Explain about Strings in java, how objects are created for string, string methods in java
+- Explain about immutability in java and consider example of string
+- Interview questions related to string in java along with edge case scenarios and important concepts about Strings (like string pool)
+- Interview questions related to Wrapper classes
+
+# Core java 11
+- Explain and implement below topics of generics and can create simple and understanding classes if required apart from demo and main
+- Generics provide compile-time type safety, eliminate casting, support reusable code using type parameters, differ from raw types (no checks), and use diamond operator (<>) for type inference while runtime uses type erasure.
+- Generic classes use type parameters (<T>) to create reusable types, support multiple parameters (<K,V>), follow conventions (T,E,K,V), are instantiated with concrete types (Box<String>), and can include generic constructors.
+- Generic methods declare their own type parameter (<T>) before return type, can be static, support type inference, and are independent of whether the class itself is generic.
+- Type parameters define placeholders (<T>, <T,U,V>), can be bounded using extends, and support recursive bounds like <T extends Comparable<T>> for type-safe comparisons.
+- Bounded generics restrict types using upper bounds (<T extends Class>), enforce inheritance constraints, and support multiple bounds (<T extends A & B>) combining class and interfaces.
+- Wildcards represent unknown types where unbounded (List<?>) is generic read-only, upper bounded (<? extends T>) allows safe reading, and lower bounded (<? super T>) allows writing.
+- PECS (Producer Extends, Consumer Super) means use <? extends T> for reading data and <? super T> for writing data to ensure type safety.
+- Type erasure removes generic type information at runtime, converts generics to raw types, ensures backward compatibility, and introduces bridge methods for polymorphism.
+- Generics do not support primitives, cannot instantiate type parameters (new T()), disallow static type parameters, forbid generic arrays, and restrict instanceof with parameterized types.
+- Arrays are covariant while generics are invariant, mixing both leads to runtime issues, and can cause heap pollution due to type safety violations.
+- Generics are invariant (List<Integer> ≠ List<Number>), require wildcards for flexibility, and follow strict subtyping rules based on exact types or bounds.
+- Generic interfaces define contracts with type parameters (e.g., Repository<T>) and can be implemented with fixed types or remain generic.
+- Generic constructors declare their own type parameters independent of class generics and allow flexible object initialization.
+- Java does not support generic exception classes and does not allow catching exceptions using type parameters due to type erasure.
+- Bridge methods are compiler-generated during type erasure to preserve method overriding and ensure runtime polymorphism.
+- Type inference allows the compiler to automatically determine types using diamond operator (<>) and improved significantly in Java 8 with lambdas.
+- Generic patterns include factory methods, singleton patterns, and helper utilities that promote reusable and type-safe designs.
+- Collections use generics (List<T>, Map<K,V>) for type safety, Comparable<T> for natural ordering, and Comparator<T> for custom sorting.
